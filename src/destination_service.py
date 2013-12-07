@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-import roslib
-roslib.load_manifest('simple_navigation_goals')
-
 import rospy
 import tf
 from ar_track_alvar.msg import AlvarMarker
