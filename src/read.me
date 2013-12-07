@@ -1,0 +1,19 @@
+ssh c1
+ -> robot claim
+ -> robot start
+ -> roslaunch pr2_2dnav_slam pr2_2dnav.launch
+new tab
+ssc c1
+ -> rosrun pr2_tuckarm tuck_arms.py -r t -l t
+new tab
+ssh c1
+ -> roslaunch ar_track_alvar kinect.launch
+new tab
+ssh c1
+ -> roslaunch ar_track_alvar pr2_indiv.launch
+new tab
+realrobot
+roslaunch pr2_navigation_slam rviz_move_base_slam.launch
+new tab
+realrobot
+rosrun catch_me destination_publisher.py

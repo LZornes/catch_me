@@ -1,0 +1,30 @@
+<launch>
+    <include file="$(find catch_me)/catch_me_robot_no_client.launch" />
+    <node pkg="catch_me"
+          name="head_tracking"
+          type="head_object_tracking.py"
+          output="screen" />
+    <node pkg="catch_me"
+          name="destination_service"
+          type="destination_service.py"
+          output="screen" />
+    <node pkg="catch_me"
+          name="destination_publisher"
+          type="destination_publisher.py"
+          output="screen" />
+    <node pkg="catch_me"
+          name="local_search"
+          type="local_search.py"
+          output="screen" />
+    <node pkg="catch_me"
+          name="base_rotate"
+          type="base_rotate.py"
+          output="screen" />
+    <node pkg="catch_me"
+          name="tuck_arms"
+          type="tuck_arms.py"
+          output="screen" />
+<!--    <node pkg="catch_me"
+          name="kill"
+          type="kill.py" />-->
+</launch>

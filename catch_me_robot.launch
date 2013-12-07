@@ -1,0 +1,11 @@
+<launch>
+    <include file="$(find catch_me)/catch_me_robot_no_dest.launch" />
+    <node pkg="catch_me" 
+        name="catch_me" 
+        type="run_catch_me.py"
+        output="screen" />
+    <node pkg="catch_me"
+        name="kill"
+        type="kill.py"
+        output="screen" />
+</launch>

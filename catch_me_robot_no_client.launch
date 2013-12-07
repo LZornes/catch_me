@@ -1,0 +1,26 @@
+<launch>
+    <include file="$(find pr2_2dnav_local)/pr2_2dnav.launch" />
+    <include file="$(find ar_track_alvar)/launch/kinect.launch" />
+    <include file="$(find ar_track_alvar)/launch/pr2_indiv.launch" />
+
+<!--
+    <rosparam command="load" file="$(find catch_me)/params/move_base_params.yaml"/>
+    <rosparam command="load" ns="move_base_local_node/global_costmap" file="$(find catch_me)/params/costmap_common_params.yaml"/>
+    <rosparam command="load" ns="move_base_local_node/local_costmap" file="$(find catch_me)/params/costmap_common_params.yaml"/>
+    <rosparam command="load" ns="move_base_local" file="$(find catch_me)/params/local_costmap_params_close.yaml"/>
+    <rosparam command="load" ns="DWAPlannerROS" file="$(find catch_me)/params/dwa_local_planner.yaml"/>
+    <param name="/move_base_local_node/global_costmap/inflation_radius" value=".50" />
+    <param name="/move_base_local_node/local_costmap/inflation_radius" value=".50" />
+    <param name="/move_base_local_node/global_costmap/resolution" value = ".025" />
+    <param name="/move_base_local_node/local_costmap/resolution" value = ".025" />
+    <param name="/move_base_local_node/local_costmap/obstacle_range" value = "1.5" />
+    <param name="/move_base_local_node/global_costmap/obstacle_range" value = "1.5" />
+-->
+
+
+    <param name="/move_base_local_node/controller_patience" value = "2.0" />
+    <param name="/move_base_local_node/planner_patience" value = "2.0" />
+    <param name="/move_base_local_node/DWAPlannerROS/xy_goal_tolerance" value = "0.4" />
+    <param name="/move_base_local_node/DWAPlannerROS/yaw_goal_tolerance" value = "0.4" />
+
+</launch>
